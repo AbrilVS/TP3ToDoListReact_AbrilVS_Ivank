@@ -15,10 +15,8 @@ export const Ingreso = ({setTareas,tareas}) => {
             esTachado:false
         };
 
-        let auxlist = tareas;
-        console.log(auxlist)
-        auxlist.push(objnuevo)
-        setTareas(auxlist)
+        let aux = [...tareas,objnuevo];
+        setTareas(aux)
     }
 
   return (

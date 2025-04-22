@@ -16,6 +16,11 @@ body {
   height: 100vh;
   margin: 0;
 }
+img{
+  width: 10%;
+  height: 10%;
+}
+
 
 .contenedori {
   background-color: #ffffff; 

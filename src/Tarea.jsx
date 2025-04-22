@@ -1,16 +1,22 @@
 import React from 'react'
 
-export const Tarea = ({item,marcarTarea}) => {
-    let estaTachado = "";
-    //let checked = "";
+export const Tarea = ({item,marcarTarea,borrar}) => {  
+  let estaTachado = "";
 
-    if(item.esTachado)
-    {
-        //checked = "checked";
-        estaTachado = "tachar";
-    }
+  if(item.esTachado)
+  {
+      estaTachado = "tachar";
+  }
+
   return (
-    //<p class="${estaTachado}"><input type="checkbox" ${checked} onclick="Marcar(${obj.id})">${obj.titulo}</p>
-    <p class={estaTachado}><input type="checkbox" onClick={()=>marcarTarea(item.id)}>{item.nombre}</input></p>
+    <div>
+    <p className={estaTachado}><input type="checkbox" checked={item.esTachado} onChange={()=>marcarTarea(item.id)} />{item.nombre}</p> 
+    <img src="public\xmark-solid.svg" onClick={borrar(item.id)}></img>
+    </div>
+       
   )
+  
 }
+
+
+

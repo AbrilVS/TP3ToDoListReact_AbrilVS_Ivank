@@ -1,24 +1,19 @@
 import { useState } from "react";
 import { Ingreso } from "./Ingreso";
 import Listado from "./Listado"
+import { Boton } from "./Boton";
 
 function App() {
-/*const list = [
-  {id:1,nombre:"test"},
-  {id:2,nombre:"test2"}
-];*/
-
   const [tareas,setTareas] = useState([]);
-
 
   return (
     <>
       <div>
         <Ingreso setTareas={setTareas} tareas={tareas} />
-        <Listado listado={tareas} />
+        <Listado listado={tareas} setTareas={setTareas} />
+        <Boton listado={tareas} />
       </div>
-    </>
-  )
+    </>  )
 }
 
 export default App
