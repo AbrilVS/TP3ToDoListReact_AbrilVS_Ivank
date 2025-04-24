@@ -9,26 +9,34 @@ export default function Listado({listado,setTareas}) {
         encontrado.fin=Date.now()
         
         let auxListado = [...listado];
-        console.log(auxListado[id].esTachado)
+        
         auxListado[id].esTachado = true;
         setTareas(auxListado)
     }
     
-    const borrar=(id)=>{
-      console.log(id)
-      const result = listado.filter((item) => item.id =id);
-      // listado.splice(result, 1)
-      console.log(listado.splice(result, 1))
-      
+    const borrar = (id) => {
+      console.log(id);
+      // Encontrar el índice del elemento con el id dado
+      const index = listado.findIndex((item) => item.id === id);
+
+      if (index !== -1) {
+      // Crear una copia del array listado
       let auxListado = [...listado];
-      auxListado.splice(result, 1)
-      setTareas(auxListado)
-    }
+      
+      // Eliminar el elemento en el índice encontrado
+      auxListado.splice(index, 1);
+      
+      // Actualizar el estado con el nuevo array
+      setTareas(auxListado);
+      } else {
+      console.log("Elemento no encontrado");
+      }
+      };
 
     console.log(borrar)
 
   return (
-    <ul>
+    <ul class="list-group">
         {listado.map(item=>(
             <Tarea key={item.id} item={item} marcarTarea={marcarTarea} borrar={borrar} />
         ))}

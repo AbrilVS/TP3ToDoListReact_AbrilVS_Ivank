@@ -8,11 +8,12 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className='container'>
         <Ingreso setTareas={setTareas} tareas={tareas} />
         <Listado listado={tareas} setTareas={setTareas} />
         <Boton listado={tareas} />
       </div>
+     
     </>  )
 }
 
