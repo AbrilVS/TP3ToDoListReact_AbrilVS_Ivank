@@ -24,7 +24,7 @@ export const Boton = ({ listado }) => {
 
   return (
     <div>
-      <button onClick={Calc}>Mostrar tarea más rápida</button>
+      <button  onClick={Calc} type="button" class="btn btn-info">Mostrar tarea más rápida</button>
       <p>{maxNom}</p>
     </div>
   );

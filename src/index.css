@@ -1,6 +1,6 @@
 
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -17,7 +17,7 @@ body {
   margin: 0;
 }
 img{
-  
+  margin-left: 6px;
   width: 5%;
   height: 5%;
 }
@@ -78,4 +78,25 @@ img{
 .tachar {
   text-decoration: line-through;
   color: #999; 
+}
+
+.tarea{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.container{
+  background-color: white;
+  border-radius: 20px;
+  padding:50px;
+}
+
+.botoncito{
+  padding-top: 10px;
+}
+
+ul{
+  padding:0 !important;
 }

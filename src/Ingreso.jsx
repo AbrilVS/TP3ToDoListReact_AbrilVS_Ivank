@@ -38,7 +38,6 @@ export const Ingreso = ({setTareas,tareas}) => {
         </div>
           <div className="col">
           <button type="button" onClick={mandarTarea} class="btn btn-primary">Agregar</button>
-            
           </div>
 </div>
     </div>

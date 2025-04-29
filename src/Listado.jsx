@@ -37,9 +37,10 @@ export default function Listado({listado,setTareas}) {
 
   return (
     <ul class="list-group">
-        {listado.map(item=>(
-            <Tarea key={item.id} item={item} marcarTarea={marcarTarea} borrar={borrar} />
-        ))}
-    </ul>
+    {listado.map(item=>(
+        <Tarea key={item.id} item={item} marcarTarea={marcarTarea} borrar={borrar} />
+    ))}
+</ul>
+  
   )
 }
